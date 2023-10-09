@@ -1,0 +1,15 @@
+.header {
+    background-color: #f1f1f1;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-right {
+    padding: 12px;
+}
+
+.header-userName, .header-logout-btn {
+    margin: 10px;
+}
