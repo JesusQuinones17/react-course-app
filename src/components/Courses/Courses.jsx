@@ -1,5 +1,4 @@
 import CourseCard from "./components/CourseCard/CourseCard";
-import Button from "../../common/Button/Button";
 import { mockedCoursesList } from "../../constants";
 
 function Courses() {

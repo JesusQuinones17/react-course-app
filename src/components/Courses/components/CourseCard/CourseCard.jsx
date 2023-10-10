@@ -1,6 +1,7 @@
 import Button from "../../../../common/Button/Button.jsx";
 import getCourseDuration from "../../../../helpers/getCourseDuration.js";
 import getAuthorNames from "../../../../helpers/getAuthorName.js";
+import formatCreationDate from "../../../../helpers/formatCreationDate.js";
 
 function CourseCard({ course }) {
   return (
@@ -17,6 +18,10 @@ function CourseCard({ course }) {
         <p>
           <strong>Duration: </strong>
           {getCourseDuration(course.duration)}
+        </p>
+        <p>
+          <strong>Created at: </strong>
+          {formatCreationDate(course.creationDate)}
         </p>
         <Button
           className="courseCard-button"
