@@ -1,0 +1,41 @@
+.courseCard {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 10px;
+}
+
+.courseCard-info {
+    display: grid;
+    padding: 10px;
+}
+
+.courseCard-info h2 {
+    width: 100px;
+}
+
+.courseCard-info p {
+    width: 650px;
+    height: 100px;
+}
+
+.courseCard-details {
+    width: fit-content;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+@media (max-width: 900px) {
+    .courseCard-info p {
+        width: 400px; 
+        height: auto; 
+    }
+    
+    .courseCard-details {
+        width: fit-content;
+    }
+    .courseCard {
+        justify-content: space-evenly;
+    }
+}

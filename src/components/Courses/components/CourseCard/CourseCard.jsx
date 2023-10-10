@@ -3,12 +3,14 @@ import getCourseDuration from "../../../../helpers/getCourseDuration.js";
 import getAuthorNames from "../../../../helpers/getAuthorName.js";
 import formatCreationDate from "../../../../helpers/formatCreationDate.js";
 
+import "./CourseCard.css";
+
 function CourseCard({ course }) {
   return (
     <div className="courseCard">
-      <div className="courseCard-title">
+      <div className="courseCard-info">
         <h2>{course.title}</h2>
-        <p className="courseCard-description">{course.description}</p>
+        <p>{course.description}</p>
       </div>
       <div className="courseCard-details">
         <p>
