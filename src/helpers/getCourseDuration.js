@@ -1,4 +1,4 @@
-const getCourseCuration = (duration) => {
+function getCourseCuration(duration) {
 	const hours = Math.floor(duration / 60);
 	const minutes = duration % 60;
 

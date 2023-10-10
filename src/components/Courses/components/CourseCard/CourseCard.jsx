@@ -1,18 +1,8 @@
 import Button from "../../../../common/Button/Button.jsx";
-import { mockedAuthorsList } from "../../../../constants.js";
 import getCourseDuration from "../../../../helpers/getCourseDuration.js";
+import getAuthorNames from "../../../../helpers/getAuthorName.js";
 
 function CourseCard({ course }) {
-  const getAuthorNames = (authorIds) => {
-    return authorIds
-      .map((authorId) => {
-        const author = mockedAuthorsList.find(
-          (author) => author.id === authorId
-        );
-        return author ? author.name : "";
-      })
-      .join(", ");
-  };
   return (
     <div className="courseCard">
       <div className="courseCard-title">
@@ -29,7 +19,7 @@ function CourseCard({ course }) {
           {getCourseDuration(course.duration)}
         </p>
         <Button
-          className="courseCard-show-btn"
+          className="courseCard-button"
           // type="submit"
           buttonText="Show course"
           onClick={() => {
