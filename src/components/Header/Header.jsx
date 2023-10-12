@@ -11,7 +11,7 @@ function Header() {
       </a>
       <div className="header-right">
         <span className="header-userName">Jesús Quiñones</span>
-        <Button className="header-logout-btn" buttonText="Logout" onClick />
+        <Button className="header-logout-btn" buttonText="Logout" onClick={() => alert(`Logout button clicked`)} />
       </div>
     </div>
   );
