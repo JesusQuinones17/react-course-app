@@ -1,8 +1,5 @@
 function Button({ buttonText, onClick }) {
-  const handleClick = () => {
-    alert(`${buttonText} button clicked`);
-  };
-  return <button onClick={handleClick}>{buttonText}</button>;
+  return <button onClick={onClick}>{buttonText}</button>;
 }
 
 export default Button;
