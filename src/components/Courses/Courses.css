@@ -1,0 +1,6 @@
+.courses-right {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: 15px;
+}
