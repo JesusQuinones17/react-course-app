@@ -1,0 +1,28 @@
+.createCourse-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.createCourse-form, label {
+    display: grid;
+    align-items: center;
+    justify-content: left;
+    margin: 15px;
+    max-width: 500px;
+}
+
+.createCourse-form-textarea {
+    width: 400px;
+}
+
+.createCourse-authors{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.createCourse-author-author-btn, .createCourse-authors-author-name {
+    margin: 10px;
+}

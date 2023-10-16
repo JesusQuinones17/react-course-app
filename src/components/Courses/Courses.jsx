@@ -1,12 +1,13 @@
-import CourseCard from "./components/CourseCard/CourseCard";
 import Button from "../../common/Button/Button";
-import { mockedCoursesList } from "../../constants";
-
-import './Courses.css';
-import { useState, useEffect } from "react";
+import CourseCard from "./components/CourseCard/CourseCard";
 import CreateCourse from "../CreateCourse/CreateCourse";
+import { mockedCoursesList } from "../../constants";
+import './Courses.css';
+
+import { useState } from "react";
 
 function Courses() {
+  const [updatedCoursesList, setUpdatedCoursesList] = useState(mockedCoursesList);
   const [showCourses, setShowCourses] = useState(true);
   const text = showCourses ? 'Add new course' : 'Create course';
 
@@ -14,9 +15,10 @@ function Courses() {
     setShowCourses(!showCourses);
   }
 
-  useEffect(() => {
-    console.log(showCourses);
-  }, [showCourses])
+  const addNewCourse = (newCourse) => {
+    setUpdatedCoursesList([...updatedCoursesList, newCourse ])
+    // console.log(typeof mockedCoursesList);
+  }
 
   return (
     <div className="courses-container">
@@ -25,12 +27,12 @@ function Courses() {
       </div>
       {showCourses ? 
         (
-          mockedCoursesList.map((course) => {
-          // console.log(course);
+          updatedCoursesList.map((course) => {
+          console.log(course);
           return <CourseCard key={course.id} course={course} />;
-          })
+          }, )
         ) : (
-          <CreateCourse />
+          <CreateCourse onClick={changeComponent}/>
         ) 
       }
        

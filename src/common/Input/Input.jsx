@@ -2,7 +2,7 @@ function Input({ labelText, idInput, placeholderText, onChange }) {
     return (
         <>
             <label 
-                for={idInput} 
+                htmlFor={idInput} 
                 placeholder={placeholderText}
             >
             {labelText}
