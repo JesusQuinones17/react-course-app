@@ -1,12 +1,22 @@
 .createCourse-form {
     display: flex;
-    align-items: center;
+    place-items: center;
     justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
+.createCourse-form-title {
+    width: 100%;
+}
+
+.createCourse-form-description {
+    width: 100%;
+    max-width: 100%;
+}
 .createCourse-form, label {
     display: grid;
-    align-items: center;
+    place-items: center;
     justify-content: left;
     margin: 15px;
     max-width: 500px;
@@ -24,5 +34,5 @@
 }
 
 .createCourse-author-author-btn, .createCourse-authors-author-name {
-    margin: 10px;
+    margin: 20px;
 }

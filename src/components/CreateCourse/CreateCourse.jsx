@@ -84,6 +84,7 @@ function CreateCourse({ onClick }) {
                     <label className='createCourse-form-text'>
                         Title: 
                         <input 
+                            className='createCourse-form-title'
                             value={courseData.title}
                             type='text'
                             onChange={handleTitleChange}
@@ -92,6 +93,7 @@ function CreateCourse({ onClick }) {
                     <label className='createCourse-form-textarea'>
                         Description: 
                         <textarea 
+                            className='createCourse-form-description'
                             value={courseData.description}
                             type='textarea'
                             onChange={handleDescriptionChange}
@@ -162,50 +164,3 @@ function CreateCourse({ onClick }) {
 }
 
 export default CreateCourse;
-
-// example for function component
-function NameForm () {
-    const [nameValue, setNameValue] = useState('');
-  
-    const handleChange = (event) => {
-      setNameValue(event.target.value);
-    }
-  
-    const handleSubmit = (event) => {
-      alert('A name was submitted: ' + nameValue);
-      event.preventDefault();
-    }
-  
-    return (
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={nameValue} onChange={handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
-    );
-  }
-
-  function EssayForm () {
-    const [textAreaValue, setTextAreaValue] = useState('Please write an essay about your favorite DOM element.');
-  
-    const handleChange = (event) => {
-      setTextAreaValue(event.target.value);
-    }
-  
-    const handleSubmit = (event) => {
-      alert('An essay was submitted: ' + textAreaValue);
-      event.preventDefault();
-    }
-  
-    return (
-      <form onSubmit={handleSubmit}>
-        <label>
-          Essay:
-          <textarea value={textAreaValue} onChange={handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
-    );
-  }
