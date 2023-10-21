@@ -39,7 +39,7 @@ const Registration = () => {
         handleSubmit;
     };
     
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         registerUser();
         alert(`form submited ${formData.name}, ${formData.email}, ${formData.password}`);
