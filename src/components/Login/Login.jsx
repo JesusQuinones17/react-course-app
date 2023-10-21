@@ -37,7 +37,7 @@ const Login = () => {
             // save user token in localStorage
             localStorage.setItem('userToken', data);
             // send to Courses
-            navigate('/');
+            navigate('/courses');
         } catch (error) {
             console.error('Login failed', error);
         }
