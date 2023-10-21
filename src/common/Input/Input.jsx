@@ -1,4 +1,4 @@
-function Input({ labelText, idInput, placeholderText, onChange }) {
+function Input({ labelText, idInput, placeholderText, inputValue, typeInput, onChange }) {
     return (
         <>
             <label 
@@ -7,7 +7,14 @@ function Input({ labelText, idInput, placeholderText, onChange }) {
             >
             {labelText}
             </label>
-            <input id={idInput} onChange={onChange}/>
+            <input 
+                type={typeInput}
+                value={inputValue}
+                id={idInput}
+                name={idInput}
+                onChange={onChange}
+                autoComplete="true"
+            />
         </>
     );
 }
