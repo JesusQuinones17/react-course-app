@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Input from "../../common/Input/Input";
 import Button from "../../common/Button/Button";
 
+import './Registration.css';
+
 const Registration = () => {
     const [formData, setFormData] = useState({ name: "", email: "", password: "" });
     const apiURL = 'http://localhost:4000/register'
@@ -48,6 +50,7 @@ const Registration = () => {
 
     return (
         <div className="container">
+            <h2>Registration</h2>
             <form onSubmit={handleSubmit}>
                 <Input
                     idInput='name'
@@ -73,10 +76,12 @@ const Registration = () => {
                     inputValue={formData.password}
                     onChange={handleChange}
                 />
-                <Button 
-                    typeButton='submit'
-                    buttonText='Registration' 
-                    onClick={handleSubmitRegistration}/>
+                <div className='registration-submit-button'>
+                    <Button 
+                        typeButton='submit'
+                        buttonText='Registration' 
+                        onClick={handleSubmitRegistration}/>
+                </div>
             </form>
             <div className="registration-messsage">
                 <p>if you have an account you can <Link to='/login'>Login</Link> </p>

@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import Input from "../../common/Input/Input";
 import Button from "../../common/Button/Button";
 
+import './Login.css';
+
 const Login = () => {
     const [formData, setFormData] = useState({ email: '', password: '' });
     const navigate = useNavigate();
@@ -54,10 +56,11 @@ const Login = () => {
 
     return (
         <div className="login-container">
+            <h2>Login</h2>
                 <form onSubmit={handleSubmit}>
                     <Input 
                         idInput='email'
-                        labelText='Email'
+                        labelText='Email:'
                         placeholderText='Enter your email'
                         typeInput='email'
                         inputValue={formData.email}
@@ -65,7 +68,7 @@ const Login = () => {
                     />
                     <Input 
                         idInput='password'
-                        labelText='Password'
+                        labelText='Password:'
                         placeholderText='Enter your password'
                         typeInput='password'
                         inputValue={formData.password}
