@@ -1,0 +1,20 @@
+.login-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.login-submit-button {
+    text-align: center;
+    margin: 10px
+}

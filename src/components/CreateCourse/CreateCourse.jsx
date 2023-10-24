@@ -80,11 +80,12 @@ function CreateCourse({ onClick }) {
     return (
         <div className='createCourse-form'>
             <div className='createCourse-form-info'>
-                <form>
+                <form id='CreateCourse'>
                     <label className='createCourse-form-text'>
                         Title: 
                         <input 
                             className='createCourse-form-title'
+                            id='title'
                             value={courseData.title}
                             type='text'
                             onChange={handleTitleChange}
@@ -93,6 +94,7 @@ function CreateCourse({ onClick }) {
                     <label className='createCourse-form-textarea'>
                         Description: 
                         <textarea 
+                            id='description'
                             className='createCourse-form-description'
                             value={courseData.description}
                             type='textarea'
