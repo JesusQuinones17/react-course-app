@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Input from "../../common/Input/Input";
 import Button from "../../common/Button/Button";
 
@@ -7,6 +7,7 @@ import './Registration.css';
 
 const Registration = () => {
     const [formData, setFormData] = useState({ name: "", email: "", password: "" });
+    const navigate = useNavigate();
     const apiURL = 'http://localhost:4000/register'
 
     // function to manage all form inputs object
@@ -32,6 +33,7 @@ const Registration = () => {
           }
           const data = await response.json();
           console.log('User registered successfully:', data);
+          navigate('/login');
         } catch (error) {
           console.error('Registration failed:', error);
         }
